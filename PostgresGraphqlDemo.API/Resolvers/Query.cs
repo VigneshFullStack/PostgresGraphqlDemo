@@ -1,8 +1,10 @@
-﻿using PostgresGraphqlDemo.API.Models;
+﻿using HotChocolate.Authorization;
+using PostgresGraphqlDemo.API.Models;
 using PostgresGraphqlDemo.API.Repository;
 
 namespace PostgresGraphqlDemo.API.Resolvers
 {
+    //[Authorize]
     public class Query(
             IEmployeeRepository employeeRepository
             , IHttpContextAccessor httpContextAccessor

@@ -1,9 +1,11 @@
-using Microsoft.EntityFrameworkCore;
 using PostgresGraphqlDemo.API.ApplicationDbContext;
 using PostgresGraphqlDemo.API.BusinessService;
 using PostgresGraphqlDemo.API.Repository;
 using PostgresGraphqlDemo.API.Resolvers;
 using PostgresGraphqlDemo.API.Utility;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,12 +31,17 @@ builder.Services.AddScoped<IDataContext>(provider =>
     return factory.CreateDbContext();
 });
 
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//    .AddMicrosoftIdentityWebApi(builder.Configuration);
+//builder.Services.AddAuthorization();
+
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IAuditService, AuditService>();
 
 builder.Services.AddHttpContextAccessor();
 builder.Services
     .AddGraphQLServer()
+    //.AddAuthorization()
     .AddQueryType<Query>()
     .AddMutationType<Mutation>();
 

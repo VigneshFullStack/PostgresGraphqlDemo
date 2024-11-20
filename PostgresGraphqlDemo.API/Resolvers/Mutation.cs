@@ -1,9 +1,10 @@
-﻿using HotChocolate.Subscriptions;
+﻿using HotChocolate.Authorization;
 using PostgresGraphqlDemo.API.Models;
 using PostgresGraphqlDemo.API.Repository;
 
 namespace PostgresGraphqlDemo.API.Resolvers
 {
+    //[Authorize]
     public class Mutation(
             IEmployeeRepository employeeRepository
             , ILogger<Mutation> logger

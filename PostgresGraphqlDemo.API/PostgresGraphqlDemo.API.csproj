@@ -9,10 +9,8 @@
   <ItemGroup>
     <PackageReference Include="HotChocolate.AspNetCore" Version="14.1.0" />
     <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="14.1.0" />
-    <PackageReference Include="HotChocolate.AspNetCore.Subscriptions" Version="10.5.5" />
     <PackageReference Include="HotChocolate.Data.EntityFramework" Version="14.1.0" />
     <PackageReference Include="HotChocolate.Execution" Version="14.1.0" />
-    <PackageReference Include="HotChocolate.Subscriptions" Version="14.1.0" />
     <PackageReference Include="HotChocolate.Utilities.DependencyInjection" Version="14.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
@@ -25,6 +23,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Web" Version="3.4.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Npgsql" Version="9.0.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0" />
