@@ -1,0 +1,12 @@
+[10:17:39  [Information] info: 11/20/2024 10:17:39.650 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT e."Id", e."Age", e."CreatedAt", e."CreatedBy", e."Gender", e."ModifiedAt", e."ModifiedBy", e."Name", e."Salary"
+      FROM "Employees" AS e
+[10:17:39  [Information] info: 11/20/2024 10:17:39.944 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT e."Id", e."Age", e."CreatedAt", e."CreatedBy", e."Gender", e."ModifiedAt", e."ModifiedBy", e."Name", e."Salary"
+      FROM "Employees" AS e
+[10:17:42  [Information] info: 11/20/2024 10:17:42.759 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT e."Id", e."Age", e."CreatedAt", e."CreatedBy", e."Gender", e."ModifiedAt", e."ModifiedBy", e."Name", e."Salary"
+      FROM "Employees" AS e

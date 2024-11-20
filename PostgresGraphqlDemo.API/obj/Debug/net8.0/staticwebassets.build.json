@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "J1YFzfn48yk7W7YqLAtaXi6t8qj9wAPiABE4XKjAtMw=",
+  "Source": "PostgresGraphqlDemo.API",
+  "BasePath": "_content/PostgresGraphqlDemo.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
