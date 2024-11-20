@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using PostgresGraphqlDemo.API.ApplicationDbContext;
 using PostgresGraphqlDemo.API.BusinessService;
 using PostgresGraphqlDemo.API.Models;
@@ -51,7 +52,24 @@ namespace PostgresGraphqlDemo.API.Repository
         public async Task<IEnumerable<Employee>> GetEmployeesAsync()
         {
             return await ExecuteWithLoggingAsync(
-                async context => await context.Employees.ToListAsync(),
+                 //async context => await context.Employees.ToListAsync(),
+                 async context =>
+                 {
+                     var query = "SELECT GetAllEmployees() AS \"JsonResult\"";
+
+                     // Fetch the first QueryResult object
+                     var queryResult = await context.QueryResult
+                         .FromSqlRaw(query)
+                         .FirstOrDefaultAsync();
+
+                     // Extract the JSON string from the QueryResult object
+                     var jsonResult = queryResult?.JsonResult;
+
+                     // Deserialize JSON to a list of Employee objects
+                     return !string.IsNullOrEmpty(jsonResult)
+                         ? JsonConvert.DeserializeObject<List<Employee>>(jsonResult) ?? new List<Employee>()
+                         : new List<Employee>();
+                 },
                 "Error retrieving Employees"
             );
         }
