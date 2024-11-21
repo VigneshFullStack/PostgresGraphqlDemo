@@ -1,4 +1,4 @@
--- CREATE TABLE "Employees"
+-- CREATE TABLE employees
 -- (
 --     "Id" SERIAL PRIMARY KEY,
 --     "Name" VARCHAR(100) NOT NULL,
@@ -11,13 +11,13 @@
 --     "ModifiedAt" TIMESTAMP DEFAULT NOW()
 -- );
 
--- INSERT INTO "Employees" ("Name", "Age", "Gender", "Salary", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt") VALUES
+-- INSERT INTO employees ("Name", "Age", "Gender", "Salary", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt") VALUES
 -- ('John Doe', 30, 'Male', 55000.00, 'Admin', NOW(), NULL, NULL),
 -- ('Jane Smith', 28, 'Female', 62000.00, 'Admin', NOW(), NULL, NULL),
 -- ('Alex Johnson', 35, 'Other', 48000.50, 'HR', NOW(), 'Admin', NOW()),
 -- ('Emily Davis', 40, 'Female', 75000.75, 'Manager', NOW(), NULL, NULL),
 -- ('Michael Brown', 45, 'Male', 67000.25, 'Admin', NOW(), 'Manager', NOW());
 
-Select * from "Employees";
+Select * from employees;
 
 

@@ -55,7 +55,7 @@ namespace PostgresGraphqlDemo.API.Repository
                  //async context => await context.Employees.ToListAsync(),
                  async context =>
                  {
-                     var query = "SELECT GetAllEmployees() AS \"JsonResult\"";
+                     var query = "SELECT public.get_all_employees() AS \"JsonResult\"";
 
                      // Fetch the first QueryResult object
                      var queryResult = await context.QueryResult
