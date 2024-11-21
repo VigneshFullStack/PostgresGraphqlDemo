@@ -1,17 +1,18 @@
 -- CREATE TABLE employees
 -- (
---     "Id" SERIAL PRIMARY KEY,
---     "Name" VARCHAR(100) NOT NULL,
---     "Age" INT CHECK ("Age" > 18),
---     "Gender" VARCHAR(10) CHECK ("Gender" IN ('Male', 'Female', 'Other')),
---     "Salary" DECIMAL(10, 2) NOT NULL,
---     "CreatedBy" VARCHAR(100) NOT NULL,
---     "CreatedAt" TIMESTAMP DEFAULT NOW(),
---     "ModifiedBy" VARCHAR(100),
---     "ModifiedAt" TIMESTAMP DEFAULT NOW()
+--     id SERIAL PRIMARY KEY,
+--     name VARCHAR(100) NOT NULL,
+--     age INT CHECK (age > 18),
+--     gender VARCHAR(10) CHECK (gender IN ('Male', 'Female', 'Other')),
+--     salary DECIMAL(10, 2) NOT NULL,
+--     created_by VARCHAR(100) NOT NULL,
+--     created_at TIMESTAMP DEFAULT NOW(),
+--     modified_by VARCHAR(100),
+--     modified_at TIMESTAMP DEFAULT NOW()
 -- );
 
--- INSERT INTO employees ("Name", "Age", "Gender", "Salary", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt") VALUES
+
+-- INSERT INTO employees (name, age, gender, salary, created_by, created_at, modified_by, modified_at) VALUES
 -- ('John Doe', 30, 'Male', 55000.00, 'Admin', NOW(), NULL, NULL),
 -- ('Jane Smith', 28, 'Female', 62000.00, 'Admin', NOW(), NULL, NULL),
 -- ('Alex Johnson', 35, 'Other', 48000.50, 'HR', NOW(), 'Admin', NOW()),
